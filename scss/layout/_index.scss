@@ -1,0 +1,824 @@
+/* * {
+    margin: 0;
+    font-size: 20px;
+    color: white;
+} */
+.todoElIndex {
+    position: relative;
+}
+
+/* ASIDE */
+
+aside {
+    display: flex;
+    width: 20%;
+    height: 100%;
+    background: linear-gradient(to bottom, #383838 87%, #7CFFC8 87%);
+    position: absolute;
+    padding-left: 50px;
+    color: white;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 200px;
+    font-size: 24px;
+}
+
+.up {
+    height: fit-content;
+    margin-top: 200px;
+}
+
+.up p {
+    margin-top: 100px;
+}
+
+.down {
+    margin-bottom: 350px;
+    height: fit-content;
+}
+
+.triangulos {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 85.5%;
+}
+.triangulos * {
+    fill: #383838;
+}
+
+@media only screen and (max-width: 800px) {
+    aside{
+        display: none;
+    }
+}
+/* PARTE 1 */
+
+.titulo-tienda {
+    display: none;
+}
+
+.container2 {
+    width: fit-content;
+    height: fit-content;
+    align-self: center;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 100px;
+}
+
+.t1 {
+    padding: 5px 10px;
+    position: absolute;
+    left: 30%;
+    top: 28%;
+    font-size: 24px;
+    z-index: 10;
+    font-size: 22px;
+}
+
+.t2 {
+    font-size: 22px;
+    padding: 5px 10px;
+    position: absolute;
+    left: 20%;
+    top: 45%;
+    font-size: 24px;
+    z-index: 10;
+}
+
+.outterLocales {
+    display: inline-block;
+    transform: skewX(30deg);
+    background-color: $verde-agua;
+}
+
+.innerLocales {
+    display: inline-block;
+    transform: skewX(-30deg);
+}
+
+.t3 {
+    z-index: 10;
+    position: absolute;
+    font-size: 22px;
+    padding: 5px 10px;
+    font-size: 24px;
+    left: 30%;
+    top: 66%;
+}
+
+
+.outterCategorias {
+    display: inline-block;
+    transform: skewX(30deg);
+    background-color: $rojo;
+}
+
+.innerCategorias {
+    display: inline-block;
+    transform: skewX(-30deg);
+}
+
+
+.outterComida {
+    display: inline-block;
+    transform: skewX(30deg);
+    background-color: $amarillo;
+}
+
+.innerComida {
+    display: inline-block;
+    transform: skewX(-30deg);
+}
+
+@media only screen and (max-width: 900px) {
+    .t1, .t2, .t3 {
+        font-size: 22px;
+        padding: 4px 9px;
+        left: 25%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .t1, .t2, .t3 {
+        font-size: 20px;
+        padding: 3px 8px;
+        left: 25%;
+    }
+    .container2 {
+        margin-left: 7vw;
+    }
+    .titulo-tienda {
+        display: flex;
+        color: white;
+        height: fit-content;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #383838;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .titulo-tienda * {
+        padding: 10px 0;
+    }
+}
+
+
+
+.max-container {
+    display: flex;
+    width: 70%;
+    margin-left: 25%;
+}
+.container-parte-1 {
+    width: 37.5vw;
+    height: 37.5vw;
+    position: relative;
+    animation: rotate 12s infinite linear;
+    min-width: 460px;
+    min-height: 460px;
+}
+
+@media only screen and (max-width: 700px) {
+    .t1, .t2, .t3 {
+        font-size: 18px;
+        padding: 2px 7px;
+    }
+    .container2 {
+        margin: auto;
+    }
+    .container-parte-1 {
+        min-width: initial;
+        min-height: initial;
+    }
+}
+
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.box img {
+    width: 100px;
+    height: 100px;
+    animation: rotateReverse 12s infinite linear;
+}
+
+@keyframes rotateReverse {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.box {
+    position: absolute;
+    top: 0;
+}
+
+.box:nth-of-type(1) {
+    top: 0;
+    left: 0;
+}
+.box:nth-of-type(2) {
+    left: 180px;
+    top: -41.5px;
+}
+.box:nth-of-type(3) {
+    left: -49.5px;
+    top: 202.5px;
+}
+.box:nth-of-type(4) {
+    left: 337.5px;
+    top: 22.5px;
+}
+.box:nth-of-type(5) {
+    top: 180px;
+    left: 416.2px;
+}
+.box:nth-of-type(6) {
+    top: 405px;
+    left: 180px;
+}
+.box:nth-of-type(7) {
+    top: 337.5px;
+    left: 0;
+}
+.box:nth-of-type(8) {
+    top: 337.5px;
+    left: 337.5px;
+}
+
+@media only screen and (max-width: 800px) {
+    .max-container {
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    
+    .max-container {
+        flex-direction: column;
+        width: fit-content;
+    }
+
+    .container-parte-1 {
+        width: 60vw;
+        height: 60vw;
+    }
+    .box img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .box:nth-of-type(2) {
+        left: 24vw;
+        top: -5.4vw;
+    }
+    .box:nth-of-type(3) {
+        left: -6.6vw;
+        top: 27vw;
+    }
+    .box:nth-of-type(4) {
+        left: 45vw;
+        top: 3vw;
+    }
+    .box:nth-of-type(5) {
+        top: 24vw;
+        left: 55.5vw;
+    }
+    .box:nth-of-type(6) {
+        top: 54vw;
+        left: 24vw;
+    }
+    .box:nth-of-type(7) {
+        top: 45vw;
+        left: 0;
+    }
+    .box:nth-of-type(8) {
+        top: 45vw;
+        left: 45vw;
+    }
+    .container2 {
+        margin: auto;
+        margin-top: 60px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .t1,
+    .t2,
+    .t3 {
+        display: none;
+    }
+    .box:nth-of-type(1),
+    .box:nth-of-type(2),
+    .box:nth-of-type(3),
+    .box:nth-of-type(4),
+    .box:nth-of-type(5),
+    .box:nth-of-type(6) {
+        display: none;
+    }
+    .container2 {
+        margin-left: -100px;
+    }
+    .container-parte-1 {
+        height: 200px;
+        position: relative;
+        animation: initial;
+        min-width: initial;
+        min-height: initial;
+    }
+    .box img {
+        width: 100%;
+        height: 100%;
+        animation: none;
+        position: initial;
+    }   
+    
+    .box:nth-of-type(7) {
+        position: absolute;
+        top: 0 ;
+        left: 0 ;
+        width: 20vw;
+        height: 20vw;
+        margin-left: 10vw;
+        animation-name: moveAndFade;
+        animation-duration: 11s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes moveAndFade {
+        0% {
+            opacity: 50%;
+        }
+        18% { 
+            transform: scale(1)translateX(0vw);
+            opacity: 50%;
+        }
+        28% {
+            opacity: 100%;
+            transform: scale(1.2)translateX(25vw);
+        }
+        48% {
+            opacity: 100%;
+            transform: scale(1.2)translateX(25vw);
+        }
+        58% {
+            opacity: 50%;
+            transform: scale(1)translateX(50vw);
+        }
+        78% {
+            opacity: 50%;
+            transform: scale(1)translateX(50vw);
+        }
+        88% {
+            opacity: 0%;
+            transform: translateX(75vw);
+        }
+        90% {
+            opacity: 0%;
+            transform: translateX(-25vw);
+        }
+        100% {
+            opacity: 50%;
+            transform: translateX(0vw);
+        }
+    }
+    
+    .box:nth-of-type(8) {
+        position: absolute;
+        top: 0 ;
+        left: 0 ;
+        width: 20vw;
+        height: 20vw;
+        margin-left: 40vw;
+        animation-name: moveAndFade2;
+        animation-duration: 11s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes moveAndFade2 {
+        0% {
+            transform: scale(1.2);
+        }
+        18% {
+            transform: scale(1.2);
+            opacity: 100%;
+        }
+        28% {
+            transform: scale(1)translateX(30vw);
+            opacity: 50%;
+        }
+        48% {
+            opacity: 50%;
+            transform: scale(1)translateX(30vw);
+        }
+        58% {
+            opacity: 0%;
+            transform: scale(1)translateX(60vw);
+        }
+        60% {
+            opacity: 0%;
+            transform: scale(1)translateX(-60vw);
+        }
+        70% {
+            opacity: 50%;
+            transform: translateX(-30vw);
+        }
+        90% {
+            opacity: 50%;
+            transform: translateX(-30vw);
+        }
+        100% {
+            opacity: 100%;
+            transform: scale(1.2)translateX(0vw);
+        }
+    }
+    
+    .box:nth-of-type(9) {
+        position: absolute;
+        top: 0 ;
+        left: 0 ;
+        width: 20vw;
+        height: 20vw;
+        margin-left: 70vw;
+        animation-name: moveAndFade3;
+        animation-duration: 11s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes moveAndFade3 {
+        0% {
+            opacity: 50%;
+        }
+        18% { 
+            transform: translateX(0vw);
+            opacity: 50%;
+        }
+        28% {
+            opacity: 0%;
+            transform: translateX(25vw);
+        }
+        30% {
+            opacity: 0%;
+            transform: translateX(-90vw);
+        }
+        40% {
+            opacity: 50%;
+            transform: translateX(-60vw);
+        }
+        60% {
+            opacity: 50%;
+            transform: scale(1)translateX(-60vw);
+        }
+        70% {
+            opacity: 100%;
+            transform: scale(1.2)translateX(-30vw);
+        }
+        90% {
+            opacity: 100%;
+            transform: scale(1.2)translateX(-30vw);
+        }
+        100% {
+            opacity: 50%;
+            transform: translateX(0vw);
+        }
+    }
+}
+/* PARTE 2 */
+
+.seccion {
+    width: 100%;
+    margin: 100px auto;
+    display: flex;
+}
+
+.container-parte-2 {
+    background-color: tomato;
+    width: 100%;
+    height: 40vw;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.container-parte-2 > h3 {
+    padding-left: 2vw;
+    font-size: 30px;
+    align-self: baseline;
+}
+
+.carta {
+    width: 35vw;
+    height: 42.5vw;
+    margin-left: auto;
+    margin-right: 8vw;
+    z-index: 100;
+    position: relative;
+    background-image: url('.././assets/media/carta.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.carta::before {
+    content: '';
+    display: block;
+    animation-name: shadowBefore;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function:step-end;
+}
+
+.carta::after {
+    content: '';
+    display: block;
+    animation-name: shadowAfter;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function:step-end;
+}
+
+
+@keyframes shadowBefore {
+    0% {
+        height: 9vw;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.316);
+    }
+    33% {
+        height: 16vw;
+    }
+    70% {
+        height: 23vw;
+    }
+}
+
+@keyframes shadowAfter {
+    0% {
+        height: 26.5vw;
+        margin-top: 7vw;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.316);
+    }
+    33% {
+        height: 19.5vw;
+    }
+    70% {
+        height: 12.5vw;
+    }
+}
+
+.container-parte-2::after {
+    content: 'Tarjeta de credito';
+    font-size: 24px;
+    padding-top: 2.5vw;
+    padding-left: 10vw;
+    display: block;
+    position: absolute;
+    background-color: white;
+    height: 6.5vw;
+    width: 100%;
+    top: 0;
+    animation-name: descend;
+    animation-duration: 3s;
+    animation-timing-function: step-end;
+    animation-iteration-count: infinite;
+}
+
+@keyframes descend {
+    0% {
+        top: 9vw;
+    }
+    33% {
+        content: 'Debito';
+        top: 16vw;
+    }
+    70% {
+        content: 'Efectivo';
+        top: 23vw;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .container-parte-2 {
+        height: 360px;
+    }
+    .carta {
+        height: 400px;
+        width: 350px;
+    }
+
+    @keyframes shadowBefore {
+        0% {
+            height: 100px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.316);
+        }
+        33% {
+            height: 175px;
+        }
+        70% {
+            height: 250px;
+        }
+    }
+    
+    @keyframes shadowAfter {
+        0% {
+            height: 235px;
+            margin-top: 65px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.316);
+        }
+        33% {
+            height: 160px;
+        }
+        70% {
+            height: 85px;
+        }
+    }
+    .container-parte-2::after {
+        height: 65px;
+    }
+    @keyframes descend {
+        0% {
+            top: 90px;
+        }
+        33% {
+            content: 'Debito';
+            top: 170px;
+        }
+        70% {
+            content: 'Efectivo';
+            top: 250px;
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .container-parte-2 {
+        flex-direction: column;
+        height: 550px;
+    }
+    .container-parte-2 h3 {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+    .carta {
+        margin: 0 auto;
+    }
+    .container-parte-2::after {
+        font-size: 24px;
+        content: '';
+        padding-top: 0;
+        padding-left: 10vw;
+        display: block;
+        position: absolute;
+        background-color: white;
+        height: 65px;
+        width: 100%;
+        top: 0;
+        animation-name: descend;
+        animation-duration: 3s;
+        animation-timing-function: step-end;
+        animation-iteration-count: infinite;
+    }
+    @keyframes descend {
+        0% {
+            top: 210px;
+        }
+        33% {
+            top: 285px;
+        }
+        70% {
+            top: 355px;
+        }
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .seccion {
+        background-color: tomato;
+    }
+    .carta {
+        width: 100%;
+    }
+}
+/* PARTE 3 */
+.parte-3 {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 400px;
+}
+
+.container-parte-3 {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin-left: 45%;   
+}
+
+@media only screen and (max-width: 767px) {
+    .container-parte-3 {
+        width: 100%;
+        margin: auto;   
+    }   
+}
+
+.foto {
+    width: 100%;
+    height: 100%;
+}
+
+.estrella {
+    position: absolute;
+    width: 5vw;
+    top: 0;
+    left: 0;
+}
+
+.e1-1 {
+    animation: 6s ease-in rotation infinite;
+    top: 15%;
+    left: 15%;
+}
+
+.e1-2 {
+    top: 45%;
+    left: 85%;
+    animation: 6s ease-in rotationReverse infinite;
+}
+
+.e1-3 {
+    top: 75%;
+    left: 10%;
+    animation: 6s ease-out rotation infinite;
+}
+
+.e1-4 {
+    animation: 6s ease-out rotationReverse infinite;
+    top: 74%;
+    left: 40%;
+}
+
+.e2-1 {
+    top: 50%;
+    left: 25%;
+    animation: 3s ease-in grow infinite;
+}
+
+.e2-2 {
+    top: 75%;
+    left: 75%;
+    animation: 3s ease-in growReverse infinite;
+}
+
+.e2-3 {
+    top: 20%;
+    left: 80%;
+    animation: 3s ease-in grow infinite;
+}
+
+.e2-4 {
+    top: 10%;
+    left: 62%;
+    animation: 3s ease-in growReverse infinite;
+}
+
+
+@keyframes rotation {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotationReverse {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes grow {
+    50% {
+        transform: scale(1.5)rotate(200deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes growReverse {
+    50% {
+        transform: scale(1.7)rotate(-150deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}

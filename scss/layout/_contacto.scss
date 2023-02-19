@@ -1,0 +1,468 @@
+.redes, .mensaje, .atencion-al-cliente {
+    margin: 300px 0;
+}
+.contenedorContacto {
+    margin: 0 10%;
+}
+
+
+
+/* ATENCION AL CLIENTE */
+
+.outerConsultaTecnica {
+    display: inline-block;
+    background-color: rgb(22, 255, 255);
+    transform: skewX(30deg);
+    padding: 0 5px;
+}
+
+.consultaTecnica {
+    display: inline-block;
+    transform: skewX(-30deg);
+}
+
+.gear-1, .gear-2, .gear-3, .herramientas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.herramientas {
+    top: 50%;
+    left: 50%;
+    width: 30%;
+}
+
+.gear-1 {
+    width: 10%;
+}
+
+.gear-2 {
+    width: 10%;
+    top: 30%;
+    left: 60%;
+}
+
+.gear-3 {
+    width: 10%;
+    top: 80%;
+    left: 30%;
+}
+.atencion-al-cliente * {
+    z-index: 2;
+}
+.atencion-al-cliente {
+    position: relative;
+    font-size: 30px;
+    display: grid;
+    grid-template-areas: 
+        'tecnica texto texto'
+        'argentina .. ..'
+        'colombia .. ..'
+        'mexico .. ..'
+    ;
+}
+.imagen-atencion {
+    grid-area: tecnica;
+}
+.texto-consulta-tecnica {
+    grid-area: texto;
+    margin: auto 10% 0;
+    line-height: 66px;
+}
+.arg {
+    grid-area: argentina;
+    display: flex;
+    margin: 44px 0 22px;
+    align-items: center;
+}
+.col {
+    grid-area: colombia;
+    display: flex;
+    margin: 0 0 22px;
+    align-items: center;
+}
+.mex {
+    grid-area: mexico;
+    display: flex;
+    align-items: center;
+}
+.icon-arg {
+    width: 50px;
+    grid-area: icon-arg;
+    margin: 0;
+    margin-right: 22px;
+}
+.icon-col {
+    margin: 0;
+    width: 50px;
+    margin-right: 22px;
+    grid-area: icon-col;
+}
+.icon-mex {
+    margin: 0;
+    width: 50px;
+    margin-right: 22px;
+    grid-area: icon-mex;
+}
+.num-arg {
+    margin: 0;
+    grid-area: num-arg;
+    letter-spacing: 1px;
+    font-size: 24px;
+}
+.num-col {
+    margin: 0;
+    grid-area: num-col;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+.num-mex {
+    margin: 0;
+    grid-area: num-mex;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 900px) {
+    .contenedorContacto {
+        margin: 0 5%;
+    }
+    .atencion-al-cliente {
+        font-size: 24px;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas: 
+        'tecnica texto texto'
+        'argentina argentina argentina'
+        'colombia colombia colombia'
+        'mexico mexico mexico'
+    ;
+    }
+    .imagen-atencion {
+        margin-top: auto;
+        width: 250px;
+    }
+    .texto-consulta-tecnica {
+        line-height: 56px;
+    }
+    .arg, .col, .mex {
+        margin: 24px auto 0;
+    }
+    .gear-2 {
+        width: 10%;
+        top: 70%;
+        left: 75%;
+    }
+    
+    .gear-3 {
+        width: 10%;
+        top: 70%;
+        left: 15%;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    .atencion-al-cliente {
+        display: flex;
+        flex-direction: column;
+    }
+    .imagen-atencion {
+        margin: 0 auto;
+    }
+    .texto-consulta-tecnica {
+        text-align: center;
+    }
+    .arg {
+        order: 2;
+    }
+    .col {
+        order: 3;
+    }
+    .mex {
+        order: 4;
+    }
+    .herramientas {
+        width: 30%;
+        top: 10%;
+        left: 5%;
+    }
+    .gear-1 {
+        width: 10%;
+        top: 10%;
+        left: 75%;
+    }
+    .gear-2 {
+        width: 10%;
+        top: 60%;
+        left: 75%;
+    }
+    .gear-3 {
+        width: 10%;
+        top: 70%;
+        left: 10%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .atencion-al-cliente {
+        font-size: 22px;
+    }
+    .imagen-atencion {
+        width: 225px;
+    }
+    .icon-arg {
+        width: 40px;
+    }
+    .icon-col {
+        width: 40px;
+    }
+    .icon-mex {
+        width: 40px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .contenedorContacto  {
+        margin: 0;
+    }
+    .texto-consulta-tecnica {
+        margin: 0;
+    }
+}
+
+/* REDES */
+.wspIcon {
+    fill: rgb(0, 199, 10);
+}
+.instaIcon {
+    fill: #41000e;
+}
+.twIcon {
+    fill: rgb(45, 166, 206);
+}
+.fbIcon {
+    fill: rgb(0, 0, 51);
+}
+
+.outerLasRedes {
+    display: inline-block;
+    background-color: rgb(255, 240, 26);
+    transform: skewX(30deg);
+    padding: 0 5px;
+}
+
+.lasRedes {
+    display: inline-block;
+    transform: skewX(-30deg);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.redes {
+    font-size: 30px;
+}
+
+.redes-imagen-texto {
+    display: flex;
+}
+
+.redes-imagen-texto img {
+    width: 200px;
+}
+
+.redes-imagen-texto p {
+    padding: 0 44px;
+    margin-top: 80px;
+    line-height: 54px;
+}
+.redes-iconos {
+    display: flex;
+    flex-wrap: wrap;
+}
+.instagram {
+    display: flex;
+    width: 40%;
+    margin: 20px auto;
+    align-items: center;
+}
+.instagram h4 {
+    font-size: 22px;
+
+}
+
+
+
+.instagram svg {
+    width: 50px; 
+    margin-right: 5px;
+}
+
+@media only screen and (max-width: 900px) {
+    .redes {
+        font-size: 24px;
+    }
+    .redes-imagen-texto img {
+        width: 125px;
+    }
+
+    .instagram svg {
+        width: 44px; 
+        margin-right: 5px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .redes {
+        font-size: 22px;
+    }
+    .redes-imagen-texto {
+        display: initial;
+    }
+    .redes-imagen-texto img {
+        width: 114px;
+        margin-right: 34px;
+        float: left;
+    }
+    .instagram svg {
+        min-width: 40px; 
+        margin-right: 5px;
+    }
+    .redes-iconos {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    .ig-1 {
+       margin-left: 10%;
+    }
+    .ig-2 {
+        margin-left: 20%;
+    }
+    .ig-3 {
+        margin-left: 30%;
+    }
+    .ig-4 {
+        margin-left: 40%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .redes {
+        font-size: 20px;
+    }
+    .redes-imagen-texto img {
+        width: 90px;
+    }
+    .ig-1 {
+        width: fit-content;
+        margin: 10px auto;
+    }
+    .ig-2 {
+        width: fit-content;
+        margin: 10px auto;
+    }
+    .ig-3 {
+        width: fit-content;
+        margin: 10px auto;
+    }
+    .ig-4 {
+        width: fit-content;
+        margin: 10px auto;
+    }
+}
+
+/* MENSAJE */
+
+.mensaje {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    font-size: 30px;
+}
+
+.para-2 {
+    grid-row: 2/3;
+    margin-top: auto;
+}
+
+.outter-correo {
+    display: inline-block;
+    background-color: #FF1C1C;
+    padding: 0 10px;
+    transform: skewX(30deg);
+    margin-right: 3px;
+}
+
+.inner-correo {
+    display: inline-block;
+    transform: skewX(-30deg);
+}
+
+.mail {
+    font-style: italic;
+}
+
+.enviar {
+    font-size: 26px;
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+}
+.enviar label {
+    margin-bottom: 12px;
+}
+
+.enviar input[type="text"] {
+    height: 40px;
+    margin-bottom: 24px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+textarea {
+    height: 130px;
+    margin-bottom: 24px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.enviar input[type="button"] {
+    height: 40px;
+    font-size: 24px;
+    border: none;
+    border-radius: 3px;
+    margin-top: 20px;
+    background-color: #000000;
+    box-shadow: 1px 1px 10px black;
+    border: 5px solid #030303;
+    color: white;
+} 
+.enviar input[type="button"]:hover {
+    height: 40px;
+    font-size: 24px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2c8fff;
+    box-shadow: 1px 1px 30px rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+} 
+
+@media only screen and (max-width: 800px) {
+    .mensaje {
+        grid-template-columns: 1fr;
+    }
+    .enviar {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .para-2 {
+        margin-top: 24px;
+        grid-row: 3/4;
+    }
+}
+
+

@@ -1,0 +1,118 @@
+.contenedorRegistro {
+    display: grid;
+    font-size: 30px;
+    grid-template-columns: 60% 40%;
+    margin: 0;
+    margin: 0 0 0 10%;
+}
+
+.contenedorRegistro > h2 {
+    padding-right: 44px;
+    grid-column: 1/2;
+}
+
+.contenedorRegistro > p {
+    grid-column: 1/2;
+    font-size: 28px;
+    padding-right: 44px;
+    line-height: 44px;
+}
+
+form {
+    background-color: #222222;
+    font-size: 28px;
+    grid-column: 2/3;
+    grid-row: 1/4;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: auto;    
+    padding-top: 100px;
+}
+
+form * {
+    margin-bottom: 24px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form input[type="button"] {
+    font-size: 30px;
+    background-color: #7CFFC8;
+}
+
+@media only screen and (max-width: 900px) {
+    .contenedorRegistro {
+        margin: 0 0 0 5%;
+    }    
+    .contenedorRegistro > h2 {
+        font-size: 28px;
+    }
+    .contenedorRegistro > p {
+        font-size: 24px;
+    }
+    form {
+        font-size: 24px;
+        height: 100%;
+    }
+    form input[type="button"] {
+        font-size: 26px;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .contenedorRegistro {
+        margin: 0 0 0 5%;
+    }    
+    .contenedorRegistro {
+        grid-template-columns: 1fr 1fr;
+    }
+    .contenedorRegistro > h2 {
+        font-size: 28px;
+    }
+    .contenedorRegistro > p {
+        font-size: 24px;
+    }
+    form {
+        font-size: 24px;
+        margin-top: auto;
+        height: 100%;
+    }
+    form input[type="button"] {
+        font-size: 26px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .contenedorRegistro {
+        background-color: #222222;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+    .contenedorRegistro > h2, 
+    .contenedorRegistro > p {
+        margin-left: 10%;
+    }
+    .contenedorRegistro > p:nth-last-of-type(1) {
+        order: 6;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+    .contenedorRegistro > h2 {
+        font-size: 22px;
+    }
+    .contenedorRegistro > p, form * {
+        font-size: 20px;
+    }
+    form input[type="button"] {
+        font-size: 24px;
+    }
+}
+

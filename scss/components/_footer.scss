@@ -1,0 +1,139 @@
+/* FOOTER */
+
+footer {
+    height: fit-content;
+    display: flex;
+    align-items: center; 
+    color: white;   
+}
+
+footer h4 {
+    font-size: 24px;
+}
+
+
+.container-footer {
+    background-color: #202020;
+    display: grid;
+    grid-template-areas: 
+        'names redes-footer'
+        'derechos date'
+    ;
+    width: 100%;
+    padding: 1vw 2vw;
+    height: 200px;
+    z-index: 1;
+    position: relative;
+}
+
+.redes-footer {
+    grid-area: redes-footer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+}
+
+.redes-footer svg {
+    width: 60px;
+    z-index: 3;
+    height: 40px;
+}
+
+.names {
+    z-index: 3;
+    grid-area: names;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.names h4 {
+    z-index: 3;
+    margin: 0;
+}
+
+.date {
+    z-index: 3;
+    grid-area: date;
+    margin: 0;
+    height: fit-content;
+    margin-top: auto;
+    margin-left: auto;
+}
+
+.rights {
+    grid-area: derechos;
+    margin: 0;
+    height: fit-content;
+    z-index: 3;
+    margin-top: auto;
+}
+
+
+
+
+@media only screen and (max-width: 450px) {
+
+    .container-footer {
+        grid-template-areas: 
+        'redes-footer redes-footer'
+        'names date'
+        'derechos derechos'
+        ;
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 0;
+        padding-top: 0;
+    }
+    .container-footer h4{
+        font-size: 18px;
+    }
+    .redes-footer {
+        padding: 24px 15px;
+        margin-top: 0;
+        background-color: aqua;
+        
+    }
+    .redes-footer svg path{
+        fill: #202020 !important;
+    }
+    .names, .rights {
+        padding-left: 24px;
+    }
+
+    .date {
+        padding-right: 24px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .container-footer h4 {
+        font-size: 16px;
+    }
+    .container-footer {
+        background: linear-gradient(to top, rgba(32,32,32,1) 70%, rgba(124,255,200,1) 30%);
+        grid-template-areas: 
+        'redes-footer'
+        'names'
+            'date'
+            'derechos'
+            ;
+        }
+        .names, .date, .rights {
+            margin: 0 auto;
+            text-align: center;
+        }
+        .names, .rights {
+            padding-left: 0;
+        }
+        
+        .date {
+            padding-right: 0;
+        }
+    }
+    .redes-footer svg path{
+        fill: white;
+        
+    }
+    

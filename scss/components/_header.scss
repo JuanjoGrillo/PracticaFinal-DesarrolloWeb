@@ -1,0 +1,290 @@
+/* HEADER */
+header {
+    /* width: 100vw; */
+    height: 35vw;
+    background-image: url('.././assets/media/bg.png');
+    background-size: cover;
+    z-index: -2 !important;
+}   
+
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 35vw;
+    background-color: rgba(0, 0, 0, 0.167);
+    z-index: 1 !important;
+}
+
+header > * {
+    z-index: 2;
+}
+
+/* header */
+
+header {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 10.5vw 24.5vw;
+    grid-template-areas: 
+        'menu-h menu-h'
+        'logo .'
+    ;
+}
+
+.redes-header {
+    grid-area: redes-header;
+    margin-left: 2vw;
+    margin-top: 2vw;
+}
+
+.redes-header a img {
+    max-height: 3vw;
+    margin-left: 2vw;
+    min-height: 22px;
+}
+
+.user {
+    grid-area: user;
+    margin-left: auto;
+    margin-right: 4vw;
+    display: flex;
+}
+
+.user img {
+    margin-top: 2vw;
+    height: 3vw;
+    min-height: 25px;
+}
+
+.user {
+    text-decoration: none;
+}
+
+.user::before {
+    content: 'Registrate';
+    display: block;
+    height: fit-content;
+    width: fit-content;
+    margin-top: 2.5vw;
+    padding-right: 10px;
+    font-size: 1.4vw;
+    color: white;
+    font-weight: bold;
+    
+}
+
+.logo {
+    grid-area: logo;
+    width: 25vw;
+    margin-left: auto;
+}
+
+.comentarios {
+    grid-area: comentarios;
+    position: absolute;
+    font-size: 2vw;
+    width: fit-content;
+    top: 21vw;
+    right: 48vw;
+}
+  
+.comentario {
+background-color: rgba(255, 255, 0, 0.692);
+margin-left: auto;
+width: fit-content;
+height: 100%;
+color: black;
+}
+
+.comentario p {
+    margin: 0;
+    padding: 0.2vw;
+}
+
+.comentario:nth-of-type(1) {
+margin-right: 18vw;
+}
+
+.comentario:nth-of-type(2) {
+    margin-right: 9vw;
+}
+
+.main-span {
+    background-color: yellow;
+    padding: 0.3vw 0.4vw;
+    margin: 0 -0.4vw;
+}
+
+.first-span {
+    position: relative;
+    z-index: 100;
+}
+
+.final-span {
+    position: relative;
+    z-index: 100;
+}
+
+.menu-h {
+    margin-top: -5vw;
+    grid-area: menu-h;
+}
+
+.user {
+    order: 3;
+}
+
+.opciones ul{
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    top: 40vw;
+    left: 0;
+    background-color: #383838;
+    padding: 0 4vw;
+}
+.opciones ul * {
+    color: white;
+}
+.opciones ul{
+height: 40px;
+}
+
+.opciones ul li {
+    width: 25%;
+    text-align: center;
+}
+
+.opciones ul li:hover {
+    background-color: aqua;
+}
+
+@media only screen and (max-width: 767px) {
+    header {
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 24.5vw 10.5vw;
+        grid-template-areas: 
+            'logo ..'
+            'menu-h menu-h'
+            ;
+        }     
+        .boton{
+            color: rgba(0, 0, 0, 0);
+            border: none;
+        }
+        .boton img {
+            width: 4vw;
+            min-width: 30px;
+        }
+        .user {
+            order: initial;
+        }
+        .opciones {
+            display: initial;
+            position: absolute;
+            top: 9.7vw;
+            width: 100%;
+        }
+        
+        .opciones ul{
+            align-items: center;
+            /* width: 100vw; */
+            justify-content: initial;
+            position: initial;
+            top: initial;
+            left: initial;
+            height: auto;
+        }
+        .menu-h {
+            margin-bottom: auto;
+            margin-top: 0.8vw;
+        }
+        .menu-h > div {
+            padding: 0;
+        }
+            
+            
+    .logo {
+        margin-left: 4vw;
+        margin-top: auto;
+        width: 30vw;
+    }
+    .comentarios {
+        grid-area: comentarios;
+        position: absolute;
+        font-size: 2vw;
+        width: fit-content;
+        top: 10vw;
+        right: 5vw;
+        font-size: 2.8vw;
+    }
+    .redes-header, .user {
+        margin-top: auto;
+        margin-bottom: 2vw;
+    }
+}
+.logo-2 {
+    display:none;
+}
+@media only screen and (max-width: 450px) {
+    .logo-1 {
+        display: none;
+    }
+    .logo-2 {
+        display: initial;
+        height: 30vw;
+        width: 40%;
+    }
+    .comentarios {
+        display: none;
+    }
+    header::after {
+        display: none;
+    }
+    header {
+        display: flex;
+        background-image: url('.././assets/media/bg.png');
+        height: 38vw;
+    }
+    .menu-h {
+        margin-top: 0;
+        margin-bottom: auto;
+        width: 100%;
+    }
+    .redes-header {
+        display: none;
+    }
+    .opciones {
+        display: initial;
+        position: initial;
+    }
+    .opciones ul{
+        align-items: auto;
+        width: initial;
+        justify-content: initial;
+        position: initial;
+        top: initial;
+        left: initial;
+        height: auto;
+    }
+    .user {
+        margin: 0;
+        margin-left: auto;
+        margin-right: 2vw;
+    }
+    .user img {
+        height: 40px;
+        width: 40px;
+    } 
+    .boton img {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+.opciones {
+    font-size: 26px;
+}
