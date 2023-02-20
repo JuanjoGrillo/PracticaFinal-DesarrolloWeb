@@ -739,9 +739,10 @@ aside {
 
 .estrella {
     position: absolute;
-    width: 5vw;
-    top: 0;
-    left: 0;
+    // width: 5vw;
+    // top: 0;
+    // left: 0;
+    @include posize(5vw, 0, 0);
 }
 
 .e1-1 {

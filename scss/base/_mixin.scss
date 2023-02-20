@@ -1,0 +1,7 @@
+@mixin posize($width, $top, $left) {
+    width: $width;
+    top: $top;
+    left: $left;
+}
+
+$colors: (Wsp: rgb(0, 199, 10), Insta: #41000e, Tw: rgb(45, 166, 206), Fb: rgb(0, 0, 51));

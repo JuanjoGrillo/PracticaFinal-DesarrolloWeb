@@ -592,9 +592,7 @@ aside {
     margin-top: 60px; } }
 
 @media only screen and (max-width: 450px) {
-  .t1,
-  .t2,
-  .t3 {
+  .t1, .t2, .t3 {
     display: none; }
   .box:nth-of-type(1),
   .box:nth-of-type(2),
@@ -1298,8 +1296,11 @@ hr {
   max-height: 200px;
   opacity: 60%; }
 
-.redes, .mensaje, .atencion-al-cliente {
+.redes, .mensaje {
   margin: 300px 0; }
+
+.atencion-al-cliente {
+  margin-top: 100px; }
 
 .contenedorContacto {
   margin: 0 10%; }
@@ -1356,39 +1357,33 @@ hr {
   margin: auto 10% 0;
   line-height: 66px; }
 
+.flex-center, .arg, .col, .mex {
+  display: flex;
+  align-items: center; }
+
 .arg {
   grid-area: argentina;
-  display: flex;
-  margin: 44px 0 22px;
-  align-items: center; }
+  margin: 44px 0 22px; }
 
 .col {
   grid-area: colombia;
-  display: flex;
-  margin: 0 0 22px;
-  align-items: center; }
+  margin: 0 0 22px; }
 
 .mex {
-  grid-area: mexico;
-  display: flex;
-  align-items: center; }
+  grid-area: mexico; }
 
-.icon-arg {
+.margin-width, .icon-arg, .icon-col, .icon-mex {
   width: 50px;
-  grid-area: icon-arg;
   margin: 0;
   margin-right: 22px; }
 
+.icon-arg {
+  grid-area: icon-arg; }
+
 .icon-col {
-  margin: 0;
-  width: 50px;
-  margin-right: 22px;
   grid-area: icon-col; }
 
 .icon-mex {
-  margin: 0;
-  width: 50px;
-  margin-right: 22px;
   grid-area: icon-mex; }
 
 .num-arg {
@@ -1481,17 +1476,16 @@ hr {
   .texto-consulta-tecnica {
     margin: 0; } }
 
-/* REDES */
-.wspIcon {
+.iconWsp {
   fill: #00c70a; }
 
-.instaIcon {
+.iconInsta {
   fill: #41000e; }
 
-.twIcon {
+.iconTw {
   fill: #2da6ce; }
 
-.fbIcon {
+.iconFb {
   fill: #000033; }
 
 .outerLasRedes {
