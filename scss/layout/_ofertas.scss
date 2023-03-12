@@ -218,8 +218,6 @@
         font-size: 24px;
     }
 }
-
-
 @media only screen and (max-width: 500px) {
     .texto-oferta-especial p:nth-of-type(1) {
         font-size: 22px;
@@ -310,7 +308,6 @@
 }
 
 .tituloBlanco:hover {
-    text-transform: capitalize;
     border-left: 4px rgb(255, 255, 255) solid;
     border-right: 4px rgb(255, 255, 255) solid;
 }
@@ -327,7 +324,6 @@
 }
 
 .tituloAmarillo:hover {
-    text-transform: capitalize;
     border-left: 4px yellow solid;
     border-right: 4px yellow solid;
 }
@@ -353,7 +349,6 @@
 
 
 .tituloRojo:hover {
-    text-transform: capitalize;
     border-left: 4px solid $rojo;
     border-right: 4px solid $rojo;
 }

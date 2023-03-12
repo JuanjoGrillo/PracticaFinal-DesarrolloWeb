@@ -1,14 +1,6 @@
-/* * {
-    margin: 0;
-    font-size: 20px;
-    color: white;
-} */
 .todoElIndex {
     position: relative;
 }
-
-/* ASIDE */
-
 aside {
     display: flex;
     width: 20%;
@@ -22,42 +14,27 @@ aside {
     padding-bottom: 200px;
     font-size: 24px;
 }
-
 .up {
     height: fit-content;
     margin-top: 200px;
 }
-
-.up p {
-    margin-top: 100px;
+.up {
+    p {
+        margin-top: 100px;
+    } 
 }
-
 .down {
-    margin-bottom: 350px;
+    margin-bottom: 8vw;
     height: fit-content;
 }
-
-.triangulos {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 85.5%;
-}
-.triangulos * {
-    fill: #383838;
-}
-
 @media only screen and (max-width: 800px) {
     aside{
         display: none;
     }
 }
-/* PARTE 1 */
-
 .titulo-tienda {
     display: none;
 }
-
 .container2 {
     width: fit-content;
     height: fit-content;
@@ -66,72 +43,54 @@ aside {
     position: relative;
     margin-top: 100px;
 }
-
-.t1 {
+.t {
     padding: 5px 10px;
+    font-size: 24px;
     position: absolute;
+    z-index: 10;
+}
+.t1 {
     left: 30%;
     top: 28%;
-    font-size: 24px;
-    z-index: 10;
-    font-size: 22px;
+    @extend .t;
 }
-
 .t2 {
-    font-size: 22px;
-    padding: 5px 10px;
-    position: absolute;
     left: 20%;
     top: 45%;
-    font-size: 24px;
-    z-index: 10;
+    @extend .t;
 }
-
+.t3 {
+    @extend .t;
+    left: 30%;
+    top: 66%;
+}
 .outterLocales {
     display: inline-block;
     transform: skewX(30deg);
     background-color: $verde-agua;
 }
-
 .innerLocales {
     display: inline-block;
     transform: skewX(-30deg);
 }
-
-.t3 {
-    z-index: 10;
-    position: absolute;
-    font-size: 22px;
-    padding: 5px 10px;
-    font-size: 24px;
-    left: 30%;
-    top: 66%;
-}
-
-
 .outterCategorias {
     display: inline-block;
     transform: skewX(30deg);
     background-color: $rojo;
 }
-
 .innerCategorias {
     display: inline-block;
     transform: skewX(-30deg);
 }
-
-
 .outterComida {
     display: inline-block;
     transform: skewX(30deg);
     background-color: $amarillo;
 }
-
 .innerComida {
     display: inline-block;
     transform: skewX(-30deg);
 }
-
 @media only screen and (max-width: 900px) {
     .t1, .t2, .t3 {
         font-size: 22px;
@@ -139,12 +98,10 @@ aside {
         left: 25%;
     }
 }
-
 @media only screen and (max-width: 800px) {
     .t1, .t2, .t3 {
         font-size: 20px;
         padding: 3px 8px;
-        left: 25%;
     }
     .container2 {
         margin-left: 7vw;
@@ -158,14 +115,11 @@ aside {
         background-color: #383838;
         text-align: center;
         margin-bottom: 50px;
-    }
-    .titulo-tienda * {
-        padding: 10px 0;
+        * {
+            padding: 10px 0;
+        }
     }
 }
-
-
-
 .max-container {
     display: flex;
     width: 70%;
@@ -179,7 +133,6 @@ aside {
     min-width: 460px;
     min-height: 460px;
 }
-
 @media only screen and (max-width: 700px) {
     .t1, .t2, .t3 {
         font-size: 18px;
@@ -193,31 +146,25 @@ aside {
         min-height: initial;
     }
 }
-
-
-@keyframes rotate {
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
 .box img {
     width: 100px;
     height: 100px;
     animation: rotateReverse 12s infinite linear;
 }
-
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
 @keyframes rotateReverse {
     100% {
         transform: rotate(-360deg);
     }
 }
-
 .box {
     position: absolute;
     top: 0;
 }
-
 .box:nth-of-type(1) {
     top: 0;
     left: 0;
@@ -250,29 +197,26 @@ aside {
     top: 337.5px;
     left: 337.5px;
 }
-
 @media only screen and (max-width: 800px) {
     .max-container {
         margin: 0 auto;
     }
 }
-
-@media only screen and (max-width: 700px) {
-    
+@media only screen and (max-width: 700px) {   
     .max-container {
         flex-direction: column;
         width: fit-content;
     }
-
     .container-parte-1 {
         width: 60vw;
         height: 60vw;
     }
-    .box img {
-        width: 70px;
-        height: 70px;
+    .box {
+        img {
+            width: 70px;
+            height: 70px;
+        }
     }
-
     .box:nth-of-type(2) {
         left: 24vw;
         top: -5.4vw;
@@ -306,13 +250,10 @@ aside {
         margin-top: 60px;
     }
 }
-
 @media only screen and (max-width: 450px) {
     .t1,
     .t2,
-    .t3 {
-        display: none;
-    }
+    .t3,
     .box:nth-of-type(1),
     .box:nth-of-type(2),
     .box:nth-of-type(3),
@@ -331,13 +272,14 @@ aside {
         min-width: initial;
         min-height: initial;
     }
-    .box img {
-        width: 100%;
-        height: 100%;
-        animation: none;
-        position: initial;
-    }   
-    
+    .box {
+        img {
+            width: 100%;
+            height: 100%;
+            animation: none;
+            position: initial;
+        }
+    }    
     .box:nth-of-type(7) {
         position: absolute;
         top: 0 ;
@@ -345,50 +287,8 @@ aside {
         width: 20vw;
         height: 20vw;
         margin-left: 10vw;
-        animation-name: moveAndFade;
-        animation-duration: 11s;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
+        animation: moveAndFade 11s linear infinite;
     }
-    
-    @keyframes moveAndFade {
-        0% {
-            opacity: 50%;
-        }
-        18% { 
-            transform: scale(1)translateX(0vw);
-            opacity: 50%;
-        }
-        28% {
-            opacity: 100%;
-            transform: scale(1.2)translateX(25vw);
-        }
-        48% {
-            opacity: 100%;
-            transform: scale(1.2)translateX(25vw);
-        }
-        58% {
-            opacity: 50%;
-            transform: scale(1)translateX(50vw);
-        }
-        78% {
-            opacity: 50%;
-            transform: scale(1)translateX(50vw);
-        }
-        88% {
-            opacity: 0%;
-            transform: translateX(75vw);
-        }
-        90% {
-            opacity: 0%;
-            transform: translateX(-25vw);
-        }
-        100% {
-            opacity: 50%;
-            transform: translateX(0vw);
-        }
-    }
-    
     .box:nth-of-type(8) {
         position: absolute;
         top: 0 ;
@@ -396,50 +296,8 @@ aside {
         width: 20vw;
         height: 20vw;
         margin-left: 40vw;
-        animation-name: moveAndFade2;
-        animation-duration: 11s;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-    }
-    
-    @keyframes moveAndFade2 {
-        0% {
-            transform: scale(1.2);
-        }
-        18% {
-            transform: scale(1.2);
-            opacity: 100%;
-        }
-        28% {
-            transform: scale(1)translateX(30vw);
-            opacity: 50%;
-        }
-        48% {
-            opacity: 50%;
-            transform: scale(1)translateX(30vw);
-        }
-        58% {
-            opacity: 0%;
-            transform: scale(1)translateX(60vw);
-        }
-        60% {
-            opacity: 0%;
-            transform: scale(1)translateX(-60vw);
-        }
-        70% {
-            opacity: 50%;
-            transform: translateX(-30vw);
-        }
-        90% {
-            opacity: 50%;
-            transform: translateX(-30vw);
-        }
-        100% {
-            opacity: 100%;
-            transform: scale(1.2)translateX(0vw);
-        }
-    }
-    
+        animation: moveAndFade2 11s linear infinite;
+    }   
     .box:nth-of-type(9) {
         position: absolute;
         top: 0 ;
@@ -447,58 +305,14 @@ aside {
         width: 20vw;
         height: 20vw;
         margin-left: 70vw;
-        animation-name: moveAndFade3;
-        animation-duration: 11s;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-    }
-    
-    @keyframes moveAndFade3 {
-        0% {
-            opacity: 50%;
-        }
-        18% { 
-            transform: translateX(0vw);
-            opacity: 50%;
-        }
-        28% {
-            opacity: 0%;
-            transform: translateX(25vw);
-        }
-        30% {
-            opacity: 0%;
-            transform: translateX(-90vw);
-        }
-        40% {
-            opacity: 50%;
-            transform: translateX(-60vw);
-        }
-        60% {
-            opacity: 50%;
-            transform: scale(1)translateX(-60vw);
-        }
-        70% {
-            opacity: 100%;
-            transform: scale(1.2)translateX(-30vw);
-        }
-        90% {
-            opacity: 100%;
-            transform: scale(1.2)translateX(-30vw);
-        }
-        100% {
-            opacity: 50%;
-            transform: translateX(0vw);
-        }
-    }
+        animation: moveAndFade3 11s linear infinite;
+    } 
 }
-/* PARTE 2 */
-
 .seccion {
     width: 100%;
     margin: 100px auto;
     display: flex;
 }
-
 .container-parte-2 {
     background-color: tomato;
     width: 100%;
@@ -506,14 +320,12 @@ aside {
     display: flex;
     align-items: center;
     position: relative;
+    & > h3 {
+        padding-left: 2vw;
+        font-size: 30px;
+        align-self: baseline;
+    }
 }
-
-.container-parte-2 > h3 {
-    padding-left: 2vw;
-    font-size: 30px;
-    align-self: baseline;
-}
-
 .carta {
     width: 35vw;
     height: 42.5vw;
@@ -521,60 +333,18 @@ aside {
     margin-right: 8vw;
     z-index: 100;
     position: relative;
-    background-image: url('.././assets/media/carta.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: url(".././assets/media/carta.png") top left/cover ;
 }
-
-
 .carta::before {
     content: '';
     display: block;
-    animation-name: shadowBefore;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function:step-end;
+    animation: shadowBefore 3s step-end infinite;
 }
-
 .carta::after {
     content: '';
     display: block;
-    animation-name: shadowAfter;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function:step-end;
+    animation: shadowAfter 3s step-end infinite;
 }
-
-
-@keyframes shadowBefore {
-    0% {
-        height: 9vw;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.316);
-    }
-    33% {
-        height: 16vw;
-    }
-    70% {
-        height: 23vw;
-    }
-}
-
-@keyframes shadowAfter {
-    0% {
-        height: 26.5vw;
-        margin-top: 7vw;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.316);
-    }
-    33% {
-        height: 19.5vw;
-    }
-    70% {
-        height: 12.5vw;
-    }
-}
-
 .container-parte-2::after {
     content: 'Tarjeta de credito';
     font-size: 24px;
@@ -586,12 +356,261 @@ aside {
     height: 6.5vw;
     width: 100%;
     top: 0;
-    animation-name: descend;
-    animation-duration: 3s;
-    animation-timing-function: step-end;
-    animation-iteration-count: infinite;
+    animation: descend 3s step-end infinite;
+}
+@media only screen and (max-width: 360px) {
+    .seccion {
+        background-color: tomato;
+    }
+    .carta {
+        width: 100%;
+    }
+}
+.parte-3 {
+    width: 100%;
+    height: 100%;
+}
+.container-parte-3 {
+    position: relative;
+    width: 40%;
+    // height: 600px;
+    margin-left: 45%;   
+}
+@media only screen and (max-width: 800px) {
+    .container-parte-3 {
+        width: 60%;
+        margin: auto;   
+    }   
+    .parte-3 {
+        position: relative;
+        & > h4 {
+            position: absolute;
+            top: 30%;
+            left: 10%;
+            z-index: 100;
+            color: white;
+            span {
+                border-radius: 12px;
+                padding: 4px;
+                background-color: $rojo;
+                
+            }
+        }
+    }
+}
+.foto {
+    width: 100%;
+    height: 100%;
+}
+.estrella {
+    position: absolute;
+    @include posize(5vw, 0, 0);
+}
+.e1-1 {
+    animation: 6s ease-in rotation infinite;
+    top: 15%;
+    left: 15%;
+}
+.e1-2 {
+    top: 45%;
+    left: 85%;
+    animation: 6s ease-in rotationReverse infinite;
+}
+.e1-3 {
+    top: 75%;
+    left: 10%;
+    animation: 6s ease-out rotation infinite;
+}
+.e1-4 {
+    animation: 6s ease-out rotationReverse infinite;
+    top: 74%;
+    left: 40%;
+}
+.e2-1 {
+    top: 50%;
+    left: 25%;
+    animation: 3s ease-in grow infinite;
+}
+.e2-2 {
+    top: 75%;
+    left: 75%;
+    animation: 3s ease-in growReverse infinite;
+}
+.e2-3 {
+    top: 20%;
+    left: 80%;
+    animation: 3s ease-in grow infinite;
+}
+.e2-4 {
+    top: 10%;
+    left: 62%;
+    animation: 3s ease-in growReverse infinite;
+}
+@keyframes rotation {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotationReverse {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+@keyframes grow {
+    50% {
+        transform: scale(1.5)rotate(200deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes growReverse {
+    50% {
+        transform: scale(1.7)rotate(-150deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
 }
 
+@keyframes moveAndFade {
+    0% {
+        opacity: 50%;
+    }
+    18% { 
+        transform: scale(1)translateX(0vw);
+        opacity: 50%;
+    }
+    28% {
+        opacity: 100%;
+        transform: scale(1.2)translateX(25vw);
+    }
+    48% {
+        opacity: 100%;
+        transform: scale(1.2)translateX(25vw);
+    }
+    58% {
+        opacity: 50%;
+        transform: scale(1)translateX(50vw);
+    }
+    78% {
+        opacity: 50%;
+        transform: scale(1)translateX(50vw);
+    }
+    88% {
+        opacity: 0%;
+        transform: translateX(75vw);
+    }
+    90% {
+        opacity: 0%;
+        transform: translateX(-25vw);
+    }
+    100% {
+        opacity: 50%;
+        transform: translateX(0vw);
+    }
+}
+@keyframes moveAndFade2 {
+    0% {
+        transform: scale(1.2);
+    }
+    18% {
+        transform: scale(1.2);
+        opacity: 100%;
+    }
+    28% {
+        transform: scale(1)translateX(30vw);
+        opacity: 50%;
+    }
+    48% {
+        opacity: 50%;
+        transform: scale(1)translateX(30vw);
+    }
+    58% {
+        opacity: 0%;
+        transform: scale(1)translateX(60vw);
+    }
+    60% {
+        opacity: 0%;
+        transform: scale(1)translateX(-60vw);
+    }
+    70% {
+        opacity: 50%;
+        transform: translateX(-30vw);
+    }
+    90% {
+        opacity: 50%;
+        transform: translateX(-30vw);
+    }
+    100% {
+        opacity: 100%;
+        transform: scale(1.2)translateX(0vw);
+    }
+}
+@keyframes moveAndFade3 {
+    0% {
+        opacity: 50%;
+    }
+    18% { 
+        transform: translateX(0vw);
+        opacity: 50%;
+    }
+    28% {
+        opacity: 0%;
+        transform: translateX(25vw);
+    }
+    30% {
+        opacity: 0%;
+        transform: translateX(-90vw);
+    }
+    40% {
+        opacity: 50%;
+        transform: translateX(-60vw);
+    }
+    60% {
+        opacity: 50%;
+        transform: scale(1)translateX(-60vw);
+    }
+    70% {
+        opacity: 100%;
+        transform: scale(1.2)translateX(-30vw);
+    }
+    90% {
+        opacity: 100%;
+        transform: scale(1.2)translateX(-30vw);
+    }
+    100% {
+        opacity: 50%;
+        transform: translateX(0vw);
+    }
+}
+@keyframes shadowBefore {
+    0% {
+        height: 9vw;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.316);
+    }
+    33% {
+        height: 16vw;
+    }
+    70% {
+        height: 29vw;
+    }
+}
+@keyframes shadowAfter {
+    0% {
+        height: 26.5vw;
+        margin-top: 7vw;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.316);
+    }
+    33% {
+        height: 19.5vw;
+    }
+    70% {
+        height: 6.5vw;
+    }
+}
 @keyframes descend {
     0% {
         top: 9vw;
@@ -602,19 +621,20 @@ aside {
     }
     70% {
         content: 'Efectivo';
-        top: 23vw;
+        top: 29vw;
     }
 }
-
 @media screen and (max-width: 900px) {
     .container-parte-2 {
         height: 360px;
+    }
+    .container-parte-2::after {
+        height: 65px;
     }
     .carta {
         height: 400px;
         width: 350px;
     }
-
     @keyframes shadowBefore {
         0% {
             height: 100px;
@@ -628,7 +648,6 @@ aside {
             height: 250px;
         }
     }
-    
     @keyframes shadowAfter {
         0% {
             height: 235px;
@@ -638,13 +657,11 @@ aside {
         }
         33% {
             height: 160px;
+            padding-bottom: 100px !important;
         }
         70% {
             height: 85px;
         }
-    }
-    .container-parte-2::after {
-        height: 65px;
     }
     @keyframes descend {
         0% {
@@ -660,23 +677,22 @@ aside {
         }
     }
 }
-
+.parte-2-600 {
+    display: none;
+}
 @media only screen and (max-width: 700px) {
     .container-parte-2 {
         flex-direction: column;
-        height: 550px;
-    }
-    .container-parte-2 h3 {
-        width: 100%;
-        padding: 0;
-        text-align: center;
-    }
-    .carta {
-        margin: 0 auto;
+        height: 500px;
+        background: transparent;
+        h3 {
+            width: 100%;
+            padding: 0;
+            text-align: center;
+        }
     }
     .container-parte-2::after {
         font-size: 24px;
-        content: '';
         padding-top: 0;
         padding-left: 10vw;
         display: block;
@@ -685,141 +701,50 @@ aside {
         height: 65px;
         width: 100%;
         top: 0;
-        animation-name: descend;
-        animation-duration: 3s;
-        animation-timing-function: step-end;
-        animation-iteration-count: infinite;
+        animation: descend 3s step-end infinite;
+    }
+    .carta {
+        margin: 0 auto;
     }
     @keyframes descend {
         0% {
-            top: 210px;
+            top: 150px;
         }
         33% {
-            top: 285px;
+            top: 235px;
         }
         70% {
-            top: 355px;
+            top: 315px;
         }
     }
-}
-
-@media only screen and (max-width: 360px) {
-    .seccion {
-        background-color: tomato;
+    .parte-2 {
+        display: none;
     }
-    .carta {
-        width: 100%;
+    .parte-2-600 {
+        display: initial;
+        h4 {
+            font-size: 22px;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
     }
-}
-/* PARTE 3 */
-.parte-3 {
-    width: 100%;
-    height: 100%;
-    padding-bottom: 400px;
-}
-
-.container-parte-3 {
-    position: relative;
-    width: 400px;
-    height: 400px;
-    margin-left: 45%;   
-}
-
-@media only screen and (max-width: 767px) {
-    .container-parte-3 {
-        width: 100%;
-        margin: auto;   
-    }   
-}
-
-.foto {
-    width: 100%;
-    height: 100%;
-}
-
-.estrella {
-    position: absolute;
-    // width: 5vw;
-    // top: 0;
-    // left: 0;
-    @include posize(5vw, 0, 0);
-}
-
-.e1-1 {
-    animation: 6s ease-in rotation infinite;
-    top: 15%;
-    left: 15%;
-}
-
-.e1-2 {
-    top: 45%;
-    left: 85%;
-    animation: 6s ease-in rotationReverse infinite;
-}
-
-.e1-3 {
-    top: 75%;
-    left: 10%;
-    animation: 6s ease-out rotation infinite;
-}
-
-.e1-4 {
-    animation: 6s ease-out rotationReverse infinite;
-    top: 74%;
-    left: 40%;
-}
-
-.e2-1 {
-    top: 50%;
-    left: 25%;
-    animation: 3s ease-in grow infinite;
-}
-
-.e2-2 {
-    top: 75%;
-    left: 75%;
-    animation: 3s ease-in growReverse infinite;
-}
-
-.e2-3 {
-    top: 20%;
-    left: 80%;
-    animation: 3s ease-in grow infinite;
-}
-
-.e2-4 {
-    top: 10%;
-    left: 62%;
-    animation: 3s ease-in growReverse infinite;
-}
-
-
-@keyframes rotation {
-    100% {
-        transform: rotate(360deg);
+    .mediosDePago {
+        margin-top: 100px;
+            & > h4 {
+                font-size: 26px;
+            }
+        background-color: #383838;
     }
-}
+    .medioDePago {
+        display: flex;
+        width: fit-content;
+        margin: 0 auto;
+        padding: 10px 0;
+        align-items: center;
+        img {
+            margin-left: 20px;
+        }
+    }
 
-@keyframes rotationReverse {
-    100% {
-        transform: rotate(-360deg);
-    }
-}
-
-@keyframes grow {
-    50% {
-        transform: scale(1.5)rotate(200deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes growReverse {
-    50% {
-        transform: scale(1.7)rotate(-150deg);
-    }
-    100% {
-        transform: rotate(-360deg);
-    }
 }

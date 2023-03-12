@@ -1,6 +1,4 @@
-/* HEADER */
 header {
-    /* width: 100vw; */
     height: 35vw;
     background-image: url('.././assets/media/bg.png');
     background-size: cover;
@@ -143,14 +141,14 @@ margin-right: 18vw;
     position: absolute;
     top: 40vw;
     left: 0;
-    background-color: #383838;
     padding: 0 4vw;
+    background-color: black;
 }
 .opciones ul * {
     color: white;
 }
 .opciones ul{
-height: 40px;
+    height: 40px;
 }
 
 .opciones ul li {
@@ -160,6 +158,10 @@ height: 40px;
 
 .opciones ul li:hover {
     background-color: aqua;
+}
+
+.logo img {
+    margin: 0;
 }
 
 @media only screen and (max-width: 767px) {
@@ -172,12 +174,10 @@ height: 40px;
             ;
         }     
         .boton{
-            color: rgba(0, 0, 0, 0);
-            border: none;
+            border: none !important;
         }
         .boton img {
             width: 4vw;
-            min-width: 30px;
         }
         .user {
             order: initial;
@@ -191,12 +191,15 @@ height: 40px;
         
         .opciones ul{
             align-items: center;
-            /* width: 100vw; */
             justify-content: initial;
             position: initial;
             top: initial;
             left: initial;
             height: auto;
+        }
+        .opciones ul li:hover {
+            background-color: none ;
+            border-radius: 20px;
         }
         .menu-h {
             margin-bottom: auto;
@@ -287,4 +290,14 @@ height: 40px;
 
 .opciones {
     font-size: 26px;
+}
+@media only screen and (max-width: 230px) {
+    header {
+        background-image: none;
+    }
+    .menu-h {
+        display: flex;
+        flex-direction: column;
+        background: url('.././assets/media/bg.png');
+    }
 }
